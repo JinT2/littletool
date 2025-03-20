@@ -11,7 +11,7 @@ def extract_paths(input_file, output_file):
         paths = []
 
         # 更新正则表达式以匹配URL路径或独立路径
-        url_pattern = re.compile(r'(https?://[^/]+)?(/[^\s,\"]+)')
+        url_pattern = re.compile(r'([^/]+)?(/[^\s,\"]+)')
 
         for line in data:
             matches = url_pattern.findall(line)
